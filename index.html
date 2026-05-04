@@ -1,83 +1,1911 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Süni Zəka Alətləri — Hüquqi Ekspertiza Mərkəzi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d1117;
+    --paper: #f5f1eb;
+    --gold: #c9a84c;
+    --gold-light: #e8c96b;
+    --gold-dim: #8a6c2a;
+    --chatgpt: #10a37f;
+    --gemini: #4285f4;
+    --claude: #c96b3a;
+    --slate: #1e2430;
+    --mist: #e8e3da;
+    --accent-red: #c0392b;
+    --text-secondary: #5a5048;
+  }
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
-  
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-  <link href="./assets/favicon.ico" rel="icon">
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  <title>Title page</title>  
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ink);
+    color: var(--paper);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-<link href="./main.3f6952e4.css" rel="stylesheet"></head>
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    background: radial-gradient(ellipse at 20% 50%, #1a2a1a 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, #1a1a2a 0%, transparent 60%),
+                radial-gradient(ellipse at 60% 80%, #2a1a0a 0%, transparent 60%),
+                var(--ink);
+    overflow: hidden;
+  }
 
-<body class="minimal">
-<div id="site-border-left"></div>
-<div id="site-border-right"></div>
-<div id="site-border-top"></div>
-<div id="site-border-bottom"></div>
-<!-- Add your content of header -->
-<header>
-  <nav class="navbar  navbar-fixed-top navbar-inverse">
-    <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(201,168,76,0.06) 80px),
+      repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(201,168,76,0.06) 80px);
+    pointer-events: none;
+  }
 
-      <div class="collapse navbar-collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav ">
-          <li><a href="./index.html" title="">01 : Home</a></li>
-          <li><a href="./about.html" title="">02 : About me</a></li>
-          <li><a href="./works.html" title="">03 : Works</a></li>
-          <li><a href="./contact.html" title="">04 : Contact</a></li>  
-        </ul>
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 6px 18px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 40px;
+    backdrop-filter: blur(4px);
+    background: rgba(201,168,76,0.08);
+    animation: fadeUp 0.8s ease both;
+  }
 
+  .hero-badge::before {
+    content: '⚖';
+    font-size: 1rem;
+  }
 
-      </div> 
-    </div>
-  </nav>
-</header>
-<!-- Add your site or app content here -->
-  <div class="hero-full-container background-image-container white-text-container" style="background-image: url('./assets/images/space.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="hero-full-wrapper">
-            <div class="text-content">
-              <h1>Hello,<br>
-                <span id="typed-strings">
-                  <span>I'm Anar Gocayev</span>
-                  <span>IT System Administrator</span>
-                  <span>Junior Software Engineer </span>
-                </span>
-                <span id="typed"></span>
-              </h1>
-            </div>
-          </div>
-        </div>
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.08;
+    max-width: 900px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .hero h1 .highlight {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    margin-top: 28px;
+    font-size: 1.15rem;
+    color: rgba(245,241,235,0.6);
+    max-width: 600px;
+    line-height: 1.7;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .hero-pills {
+    display: flex;
+    gap: 12px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .pill {
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s;
+    border: 2px solid;
+  }
+
+  .pill-chatgpt { border-color: var(--chatgpt); color: var(--chatgpt); }
+  .pill-chatgpt:hover { background: var(--chatgpt); color: white; transform: translateY(-2px); }
+  .pill-gemini { border-color: var(--gemini); color: var(--gemini); }
+  .pill-gemini:hover { background: var(--gemini); color: white; transform: translateY(-2px); }
+  .pill-claude { border-color: var(--claude); color: var(--claude); }
+  .pill-claude:hover { background: var(--claude); color: white; transform: translateY(-2px); }
+
+  .scroll-hint {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(245,241,235,0.35);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+
+  .scroll-arrow {
+    width: 24px;
+    height: 24px;
+    border-right: 2px solid rgba(201,168,76,0.4);
+    border-bottom: 2px solid rgba(201,168,76,0.4);
+    transform: rotate(45deg);
+    animation: bounce 1.5s infinite;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,17,23,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  nav::-webkit-scrollbar { display: none; }
+
+  .nav-logo {
+    padding: 14px 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--gold);
+    white-space: nowrap;
+    border-right: 1px solid rgba(201,168,76,0.15);
+    flex-shrink: 0;
+  }
+
+  .nav-items {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .nav-item {
+    padding: 14px 20px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    color: rgba(245,241,235,0.55);
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    letter-spacing: 0.03em;
+  }
+
+  .nav-item:hover, .nav-item.active {
+    color: var(--paper);
+    border-bottom-color: var(--gold);
+  }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    display: none;
+    animation: fadeUp 0.4s ease;
+  }
+
+  .section.active { display: block; }
+
+  /* ─── SECTION HERO ─── */
+  .section-hero {
+    padding: 80px 60px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .section-hero::after {
+    content: attr(data-letter);
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 300px;
+    font-weight: 900;
+    opacity: 0.04;
+    line-height: 1;
+    pointer-events: none;
+    color: white;
+  }
+
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+
+  .section-tag::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .section-hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 700px;
+  }
+
+  .section-hero p {
+    margin-top: 20px;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(245,241,235,0.65);
+    max-width: 680px;
+  }
+
+  /* ─── CONTENT GRID ─── */
+  .content-wrap {
+    padding: 0 60px 80px;
+  }
+
+  @media (max-width: 768px) {
+    .section-hero { padding: 50px 24px 40px; }
+    .content-wrap { padding: 0 24px 60px; }
+  }
+
+  /* ─── TOOL CARDS ─── */
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .tool-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tool-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .chatgpt-card::before { background: linear-gradient(90deg, var(--chatgpt), transparent); }
+  .gemini-card::before { background: linear-gradient(90deg, var(--gemini), transparent); }
+  .claude-card::before { background: linear-gradient(90deg, var(--claude), transparent); }
+
+  .tool-card:hover {
+    background: rgba(255,255,255,0.06);
+    border-color: rgba(201,168,76,0.25);
+    transform: translateY(-3px);
+  }
+
+  .tool-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 18px;
+  }
+
+  .chatgpt-icon { background: rgba(16,163,127,0.15); }
+  .gemini-icon { background: rgba(66,133,244,0.15); }
+  .claude-icon { background: rgba(201,107,58,0.15); }
+
+  .tool-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .tool-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: rgba(245,241,235,0.65);
+    margin-bottom: 16px;
+  }
+
+  .use-case {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    color: var(--gold-light);
+    line-height: 1.5;
+  }
+
+  .use-case strong {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+
+  /* ─── MODELS SECTION ─── */
+  .models-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .model-card {
+    border-radius: 14px;
+    padding: 24px 20px;
+    position: relative;
+    cursor: default;
+    transition: transform 0.25s;
+  }
+
+  .model-card:hover { transform: translateY(-4px); }
+
+  .model-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .model-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .model-card p {
+    font-size: 0.83rem;
+    line-height: 1.6;
+    opacity: 0.75;
+  }
+
+  .model-card ul {
+    margin-top: 14px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .model-card ul li {
+    font-size: 0.8rem;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.45;
+  }
+
+  .model-card ul li::before {
+    content: '→';
+    flex-shrink: 0;
+    opacity: 0.5;
+    margin-top: 1px;
+  }
+
+  /* ─── SLASH COMMANDS ─── */
+  .slash-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .slash-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .slash-cmd {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--claude);
+    background: rgba(201,107,58,0.1);
+    padding: 3px 10px;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 1px solid rgba(201,107,58,0.25);
+  }
+
+  .slash-desc {
+    font-size: 0.83rem;
+    line-height: 1.55;
+    color: rgba(245,241,235,0.65);
+  }
+
+  /* ─── BIG TABLE ─── */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    font-size: 0.88rem;
+  }
+
+  .compare-table th {
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .compare-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    line-height: 1.5;
+    color: rgba(245,241,235,0.8);
+    vertical-align: top;
+  }
+
+  .compare-table tr:hover td {
+    background: rgba(255,255,255,0.02);
+  }
+
+  .th-chatgpt { color: var(--chatgpt); }
+  .th-gemini { color: var(--gemini); }
+  .th-claude { color: var(--claude); }
+  .th-task { color: var(--gold); }
+
+  /* ─── GEMINI MODEL STRIP ─── */
+  .gemini-models {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  @media (max-width: 680px) {
+    .gemini-models { grid-template-columns: 1fr; }
+  }
+
+  .gm-card {
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    transition: transform 0.25s;
+  }
+
+  .gm-card:hover { transform: translateY(-4px); }
+
+  .gm-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .gm-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .gm-card p { font-size: 0.82rem; line-height: 1.55; opacity: 0.7; }
+
+  /* ─── STYLE CARDS (Claude) ─── */
+  .style-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .style-card {
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.25s;
+  }
+
+  .style-card:hover {
+    border-color: rgba(201,107,58,0.3);
+    background: rgba(201,107,58,0.05);
+    transform: translateY(-2px);
+  }
+
+  .style-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--claude);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .style-card p { font-size: 0.82rem; line-height: 1.55; color: rgba(245,241,235,0.65); }
+
+  /* ─── LEGAL FRAMEWORK ─── */
+  .legal-frame {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .legal-item {
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(201,168,76,0.2);
+    background: linear-gradient(135deg, rgba(201,168,76,0.06), transparent);
+    transition: transform 0.25s;
+  }
+
+  .legal-item:hover { transform: translateY(-3px); }
+
+  .legal-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--gold);
+    opacity: 0.4;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .legal-item h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--gold-light);
+  }
+
+  .legal-item p {
+    font-size: 0.84rem;
+    line-height: 1.6;
+    color: rgba(245,241,235,0.65);
+  }
+
+  .legal-example {
+    margin-top: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    background: rgba(0,0,0,0.3);
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: rgba(245,241,235,0.7);
+    border-left: 3px solid var(--gold-dim);
+    line-height: 1.5;
+  }
+
+  /* ─── WARNINGS ─── */
+  .warning-box {
+    margin-top: 48px;
+    padding: 28px 32px;
+    border-radius: 14px;
+    background: rgba(192,57,43,0.1);
+    border: 1px solid rgba(192,57,43,0.3);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .warning-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .warning-box h3 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: #e74c3c; }
+  .warning-box p { font-size: 0.88rem; line-height: 1.65; color: rgba(245,241,235,0.7); }
+  .warning-box ul { margin-top: 10px; padding-left: 0; list-style: none; }
+  .warning-box ul li {
+    font-size: 0.85rem;
+    padding: 4px 0;
+    display: flex;
+    gap: 8px;
+    color: rgba(245,241,235,0.7);
+  }
+  .warning-box ul li::before { content: '▪'; color: #e74c3c; flex-shrink: 0; }
+
+  /* ─── DIVIDER ─── */
+  .divider {
+    margin: 60px 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
+  }
+
+  /* ─── SUBSECTION ─── */
+  .subsection {
+    margin-top: 56px;
+  }
+
+  .subsection-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .subsection-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .subsection-desc {
+    font-size: 0.95rem;
+    color: rgba(245,241,235,0.55);
+    line-height: 1.6;
+    max-width: 680px;
+    margin-bottom: 4px;
+  }
+
+  /* ─── USE CASE SCENARIOS ─── */
+  .scenario-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 28px;
+  }
+
+  .scenario {
+    background: rgba(255,255,255,0.03);
+    border-radius: 14px;
+    padding: 24px 28px;
+    border: 1px solid rgba(255,255,255,0.06);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: start;
+    transition: border-color 0.25s;
+  }
+
+  .scenario:hover { border-color: rgba(201,168,76,0.2); }
+
+  .scenario-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(201,168,76,0.2);
+    line-height: 1;
+    padding-top: 4px;
+  }
+
+  .scenario h4 { font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--paper); }
+  .scenario p { font-size: 0.87rem; line-height: 1.65; color: rgba(245,241,235,0.6); }
+  .scenario-tools {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+  }
+
+  .stag {
+    padding: 3px 12px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border: 1px solid;
+  }
+
+  .stag-chatgpt { border-color: var(--chatgpt); color: var(--chatgpt); }
+  .stag-gemini { border-color: var(--gemini); color: var(--gemini); }
+  .stag-claude { border-color: var(--claude); color: var(--claude); }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    padding: 48px 60px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: gap;
+    gap: 20px;
+  }
+
+  .footer-left {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+  }
+
+  .footer-right {
+    font-size: 0.8rem;
+    color: rgba(245,241,235,0.35);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: rotate(45deg) translateY(0); }
+    50% { transform: rotate(45deg) translateY(5px); }
+  }
+
+  /* ─── CHATGPT COLORS ─── */
+  .chatgpt-bg { background: rgba(16,163,127,0.08); }
+  .chatgpt-border { border-color: rgba(16,163,127,0.25) !important; }
+
+  /* ─── GEMINI COLORS ─── */
+  .gemini-bg { background: rgba(66,133,244,0.08); }
+
+  /* ─── CLAUDE COLORS ─── */
+  .claude-bg { background: rgba(201,107,58,0.08); }
+
+  /* ─── CONNECTOR ITEMS ─── */
+  .connector-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .connector-item {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    padding: 18px 20px;
+    transition: all 0.2s;
+  }
+
+  .connector-item:hover {
+    background: rgba(201,107,58,0.06);
+    border-color: rgba(201,107,58,0.2);
+  }
+
+  .connector-item h4 {
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .connector-item p {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: rgba(245,241,235,0.6);
+  }
+
+  /* ─── GEMINI TOOLS ─── */
+  .gemini-tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 28px;
+  }
+
+  .gt-card {
+    background: rgba(66,133,244,0.06);
+    border: 1px solid rgba(66,133,244,0.18);
+    border-radius: 14px;
+    padding: 24px;
+    transition: all 0.25s;
+  }
+
+  .gt-card:hover {
+    background: rgba(66,133,244,0.1);
+    border-color: rgba(66,133,244,0.3);
+    transform: translateY(-3px);
+  }
+
+  .gt-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #7baaf7;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .gt-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(245,241,235,0.65);
+    margin-bottom: 12px;
+  }
+
+  .gt-use {
+    font-size: 0.78rem;
+    background: rgba(66,133,244,0.12);
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #93beff;
+    line-height: 1.5;
+  }
+
+  /* ─── COMBINATION TIP ─── */
+  .combo-tip {
+    margin-top: 48px;
+    background: linear-gradient(135deg, rgba(66,133,244,0.08), rgba(16,163,127,0.06));
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px 32px;
+  }
+
+  .combo-tip h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: var(--gold-light);
+  }
+
+  .combo-tip p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: rgba(245,241,235,0.7);
+  }
+
+  .combo-flow {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+
+  .cf-step {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+  }
+
+  .cf-arrow { color: rgba(255,255,255,0.3); font-size: 1.2rem; }
+
+  /* ─── HIGHLIGHTED NOTE ─── */
+  .note-box {
+    margin-top: 32px;
+    padding: 20px 24px;
+    background: rgba(201,168,76,0.07);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    font-size: 0.87rem;
+    line-height: 1.65;
+    color: rgba(245,241,235,0.75);
+  }
+
+  .note-box strong { color: var(--gold-light); }
+
+  /* Quick nav at the top */
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    z-index: 1000;
+    width: 0%;
+    transition: width 0.1s;
+  }
+
+  .tag-chip {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-right: 6px;
+    margin-bottom: 4px;
+  }
+
+  .chip-green { background: rgba(16,163,127,0.2); color: var(--chatgpt); }
+  .chip-blue { background: rgba(66,133,244,0.2); color: #7baaf7; }
+  .chip-orange { background: rgba(201,107,58,0.2); color: #e8845a; }
+  .chip-gold { background: rgba(201,168,76,0.15); color: var(--gold-light); }
+
+  /* ─── SECTION COLORS ─── */
+  #sec-chatgpt .section-hero { background: radial-gradient(ellipse at top left, rgba(16,163,127,0.12), transparent 70%); }
+  #sec-gemini .section-hero { background: radial-gradient(ellipse at top left, rgba(66,133,244,0.12), transparent 70%); }
+  #sec-claude .section-hero { background: radial-gradient(ellipse at top left, rgba(201,107,58,0.12), transparent 70%); }
+  #sec-compare .section-hero { background: radial-gradient(ellipse at top left, rgba(201,168,76,0.08), transparent 70%); }
+  #sec-scenarios .section-hero { background: radial-gradient(ellipse at top left, rgba(192,57,43,0.08), transparent 70%); }
+
+  .kv-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .kv-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 14px 18px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .kv-key {
+    font-weight: 600;
+    font-size: 0.85rem;
+    min-width: 160px;
+    color: var(--paper);
+    flex-shrink: 0;
+  }
+
+  .kv-val {
+    font-size: 0.85rem;
+    color: rgba(245,241,235,0.65);
+    line-height: 1.5;
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0 32px;
+    color: rgba(255,255,255,0.25);
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  .step-list {
+    counter-reset: step-counter;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+  }
+
+  .step-item {
+    counter-increment: step-counter;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.025);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .step-item::before {
+    content: counter(step-counter);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: 0.6;
+    min-width: 24px;
+    line-height: 1;
+    padding-top: 2px;
+  }
+
+  .step-item p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: rgba(245,241,235,0.7);
+  }
+
+  .step-item strong { color: var(--paper); font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ══════════════════════════════════════════════ HERO -->
+<div id="sec-home" class="section active">
+<section class="hero">
+  <div class="hero-badge">Hüquqi Ekspertiza və Qanunvericilik Təşəbbüsləri Mərkəzi · 2026</div>
+  <h1>
+    <span class="highlight">Süni Zəka</span> Alətləri<br>
+    və Onların Tətbiqi
+  </h1>
+  <p class="hero-subtitle">
+    ChatGPT, Gemini və Claude AI — bu üç platformanın tam imkanları, alətləri və hüquqi iş proseslərindəki tətbiq ssenariləri
+  </p>
+  <div class="hero-pills">
+    <div class="pill pill-chatgpt" onclick="showSection('sec-chatgpt')">🤖 ChatGPT</div>
+    <div class="pill pill-gemini" onclick="showSection('sec-gemini')">✦ Gemini</div>
+    <div class="pill pill-claude" onclick="showSection('sec-claude')">◆ Claude AI</div>
+    <div class="pill" style="border-color:rgba(201,168,76,0.5); color:var(--gold);" onclick="showSection('sec-compare')">⚖ Müqayisə</div>
+    <div class="pill" style="border-color:rgba(245,241,235,0.2); color:rgba(245,241,235,0.5);" onclick="showSection('sec-scenarios')">📋 Ssenariləri</div>
+  </div>
+  <div class="scroll-hint">
+    <span>Bölmə seçin</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+</div>
+
+<!-- ══════════════════════════════════════════════ NAV -->
+<nav>
+  <div class="nav-logo">⚖ SZ Alətləri</div>
+  <div class="nav-items">
+    <div class="nav-item active" onclick="showSection('sec-home')" data-sec="sec-home">Ana Səhifə</div>
+    <div class="nav-item" onclick="showSection('sec-chatgpt')" data-sec="sec-chatgpt">ChatGPT</div>
+    <div class="nav-item" onclick="showSection('sec-gemini')" data-sec="sec-gemini">Gemini</div>
+    <div class="nav-item" onclick="showSection('sec-claude')" data-sec="sec-claude">Claude AI</div>
+    <div class="nav-item" onclick="showSection('sec-compare')" data-sec="sec-compare">Müqayisə</div>
+    <div class="nav-item" onclick="showSection('sec-scenarios')" data-sec="sec-scenarios">İş Ssenariləri</div>
+    <div class="nav-item" onclick="showSection('sec-tips')" data-sec="sec-tips">Tövsiyələr</div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════ CHATGPT -->
+<div id="sec-chatgpt" class="section">
+<section class="section-hero" data-letter="C">
+  <div class="section-tag">OpenAI · GPT-5</div>
+  <h2>ChatGPT — Çoxfunksiyalı<br>Məntiqi Analitik</h2>
+  <p>ChatGPT müasir hüquqşünaslıq üçün ən geniş tətbiq ekosisteminə malik alətdir. Mürəkkəb məntiqi mühakimə, interaktiv redaktə və dərin internet araşdırmaları onun əsas güclü tərəfləridir.</p>
+</section>
+
+<div class="content-wrap">
+
+  <!-- "+" İkonası ilə açılan alətlər -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>🔧 "+" Alət Menyusu — Nə İşə Yarayır?</span></h3>
+    <p class="subsection-desc">ChatGPT-nin yazı sahəsindəki "+" ikonasına klik etdikdə bu alətlərə çatırsınız:</p>
+  </div>
+
+  <div class="tools-grid">
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon">🔬</div>
+      <h3>Deep Research</h3>
+      <p>İnternetdəki yüzlərlə mənbəni müstəqil araşdırır, məlumatları çarpaz yoxlayır və strukturlaşdırılmış hesabat hazırlayır. <strong>5–30 dəqiqə</strong> ərzində tamamlanır. Siz o zaman başqa işlərlə məşğul ola bilərsiniz — tamamlananda bildiriş gəlir.</p>
+      <div class="use-case">
+        <strong>🏛 Hüquqi tətbiq</strong>
+        Beynəlxalq qanunvericilik müqayisəsi (məs. rəqəmsal vergi tənzimlənməsinin 5 ölkədə tətbiqi), məhkəmə təcrübəsinin analizi, GDPR / yerli miqyasda qanunvericilik fərqləri
       </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon">🧠</div>
+      <h3>Thinking (Düşüncə rejimi)</h3>
+      <p>Modeli cavab verməzdən əvvəl addım-addım məntiqi zəncir qurmağa məcbur edir. GPT-5 Thinking rejimi aktiv olduqda model öz çatışmazlıqlarını özü düzəldə bilir.</p>
+      <div class="use-case">
+        <strong>🏛 Hüquqi tətbiq</strong>
+        Mürəkkəb hüquqi kolliziyaların həlli, qanun layihəsindəki məntiqi boşluqların tapılması, müqavilə şərtlərinin bir-birinə zidd olub-olmadığının yoxlanması
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon">🌐</div>
+      <h3>Web Search</h3>
+      <p>Aktual məlumatları real vaxtda axtarır və mənbələrə (linklərə) istinad edir. Modelin öz bilik bazasından fərqli olaraq, bu alət bu günün məlumatlarını gətirir.</p>
+      <div class="use-case">
+        <strong>🏛 Hüquqi tətbiq</strong>
+        Qanunların cari statusunu yoxlamaq, son qəbul edilmiş qərarları tapmaq, qüvvəyə minmə tarixlərini dəqiqləşdirmək
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon">✏️</div>
+      <h3>Canvas</h3>
+      <p>Yazdığınız mətni paralel pəncərədə göstərən interaktiv redaktə sahəsidir. Mətni hissə-hissə seçib yenidən yazmağa, şərh əlavə etməyə, versiyaları müqayisə etməyə imkan verir.</p>
+      <div class="use-case">
+        <strong>🏛 Hüquqi tətbiq</strong>
+        Qanun layihələrinin maddə-maddə təkmilləşdirilməsi, müqavilə bəndlərinin dəyişdirilməsi, izahat vərəqələrinin redaktəsi — hər dəyişikliyi ayrıca görürsünüz
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon">❓</div>
+      <h3>Quizzes</h3>
+      <p>Yüklədiyiniz mətni dərhal test suallarına və yaddaş kartlarına çevirir. Mövcud materiallar üzrə biliyinizi yoxlamağa imkan verir.</p>
+      <div class="use-case">
+        <strong>🏛 Hüquqi tətbiq</strong>
+        Yeni qəbul edilmiş reqlamentlər üzrə daxili yoxlama testlərinin hazırlanması, əməkdaşların bilik səviyyəsinin ölçülməsi, vətəndaşlar üçün sadə bilgi yoxlamaları
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon">🎨</div>
+      <h3>Create Image</h3>
+      <p>Mətn əsasında peşəkar görüntülər yaradır (DALL-E texnologiyası). Vizual kontent üçün ayrıca proqramlara ehtiyac qalmır.</p>
+      <div class="use-case">
+        <strong>🏛 Hüquqi tətbiq</strong>
+        Təqdimatlar üçün konseptual sxemlərin hazırlanması, hüquqi prosedurları izah edən infoqurafikalar, vətəndaş məlumatlandırma materialları üçün illüstrasiyalar
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GPT Modelleri -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>⚡ GPT Modelləri — Hansını seçməli?</span></h3>
+    <p class="subsection-desc">ChatGPT müxtəlif tapşırıq tipləri üçün fərqli güc səviyyəli modellər təklif edir:</p>
+  </div>
+
+  <div class="models-row">
+
+    <div class="model-card" style="background: rgba(16,163,127,0.07); border: 1px solid rgba(16,163,127,0.2);">
+      <span class="model-badge" style="background: rgba(16,163,127,0.2); color: var(--chatgpt);">Sürət</span>
+      <h4>GPT-5 Instant</h4>
+      <p>Sürətli, gündəlik tapşırıqlar üçün ideal</p>
+      <ul>
+        <li>Qısa sənəd xülasələri</li>
+        <li>Sürətli sual-cavab</li>
+        <li>E-poçt hazırlanması</li>
+        <li>Sadə mətn tənzimlənməsi</li>
+      </ul>
+    </div>
+
+    <div class="model-card" style="background: rgba(16,163,127,0.07); border: 1px solid rgba(16,163,127,0.3);">
+      <span class="model-badge" style="background: rgba(16,163,127,0.25); color: #2ecc71;">Balans</span>
+      <h4>GPT-5 Thinking</h4>
+      <p>Dərindən düşünən, analitik model</p>
+      <ul>
+        <li>Mürəkkəb hüquqi analizlər</li>
+        <li>Qanun layihəsi boşluqları</li>
+        <li>Uzun sənəd strukturlaşdırması</li>
+        <li>Çoxaddımlı problemlər</li>
+      </ul>
+    </div>
+
+    <div class="model-card" style="background: rgba(16,163,127,0.07); border: 1px solid rgba(16,163,127,0.4);">
+      <span class="model-badge" style="background: rgba(16,163,127,0.35); color: #a8ffea;">Premium</span>
+      <h4>GPT-5 Pro</h4>
+      <p>Ən ağıllı, ən dəqiq model</p>
+      <ul>
+        <li>Son dərəcə mürəkkəb məsələlər</li>
+        <li>Çox az səhv toleransı olan işlər</li>
+        <li>Həssas hüquqi ekspertizalar</li>
+        <li>Elmi tədqiqat səviyyəsindəki tapşırıqlar</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ChatGPT Projects -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>📁 Projects — Layihələr</span></h3>
+    <p class="subsection-desc">Müəyyən mövzu üzrə (məs. "Vergi İslahatı 2026") ayrıca qovluq yaradaraq bütün sənəd, söhbət və kontekstinizi bir yerdə saxlaya bilərsiniz.</p>
+  </div>
+
+  <div class="note-box">
+    <strong>Hüquqşünaslar üçün məsləhət:</strong> Hər bir aktiv qanun layihəsi üçün ayrıca Project açın. Bütün əlaqəli sənədləri, müzakirə nəticələrini və araşdırmaları həmin layihəyə yükləyin. ChatGPT həmin kontekstdən çıxmadan işləyəcək.
+  </div>
+
+  <div class="warning-box">
+    <div class="warning-icon">⚠️</div>
+    <div>
+      <h3>Hallüsinasiya Riski — Mütləq Yoxlayın!</h3>
+      <p>Tədqiqatlar göstərir ki, ChatGPT bəzən mövcud olmayan maddə nömrələri, məhkəmə qərarları və ya sitat mənbələri "uydura" bilir. Hüquqi işdə bu kritik risk yaradır.</p>
+      <ul>
+        <li>ChatGPT-nin gətirdiyi <strong>hər bir istinadı rəsmi mənbədən yoxlayın</strong></li>
+        <li>Maddə nömrələrini müstəqil olaraq Hüquqi Aktlar portalında doğrulayın</li>
+        <li>Deep Research istifadə edərkən belə son yoxlama mütləqdir</li>
+      </ul>
     </div>
   </div>
 
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ GEMINI -->
+<div id="sec-gemini" class="section">
+<section class="section-hero" data-letter="G">
+  <div class="section-tag">Google · Gemini</div>
+  <h2>Gemini — Böyük Arxivlər<br>və Ekosistem İnteqrasiyası</h2>
+  <p>Gemini-nin ən güclü tərəfi nəhəng sənəd topluları ilə işləmək imkanı (1500+ səhifə) və Google Workspace (Drive, Gmail, Docs) ilə dərin inteqrasiyasıdır. Azərbaycan dilini rəsmi olaraq dəstəkləyir.</p>
+</section>
+
+<div class="content-wrap">
+
+  <!-- Model seçimi -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>⚡ Model Seçimi — Fast, Thinking, Pro</span></h3>
+    <p class="subsection-desc">Gemini-nin hər modeli fərqli tapşırıq tipi üçündür — düzgün seçim həm keyfiyyəti, həm sürəti artırır:</p>
+  </div>
+
+  <div class="gemini-models">
+
+    <div class="gm-card" style="background: rgba(66,133,244,0.08); border: 1px solid rgba(66,133,244,0.2);">
+      <span class="gm-icon">⚡</span>
+      <h4>Fast (Flash)</h4>
+      <p>Gündəlik, sürət tələb edən tapşırıqlar üçün. Gözləmə vaxtı minimumdur.</p>
+      <div class="use-case" style="background: rgba(66,133,244,0.1); border-color: rgba(66,133,244,0.25); color: #93beff; margin-top: 12px;">
+        <strong>Nə vaxt seçməli?</strong>
+        E-poçt yazma, qısa xülasə, sürətli sual-cavab, sənəd formatlaşdırma
+      </div>
+    </div>
+
+    <div class="gm-card" style="background: rgba(66,133,244,0.1); border: 1px solid rgba(66,133,244,0.3);">
+      <span class="gm-icon">🧠</span>
+      <h4>Thinking (Deep Think)</h4>
+      <p>Addım-addım məntiqi yoxlama tələb edən tapşırıqlar üçün. Modelin düşüncə prosesi görünür.</p>
+      <div class="use-case" style="background: rgba(66,133,244,0.1); border-color: rgba(66,133,244,0.3); color: #93beff; margin-top: 12px;">
+        <strong>Nə vaxt seçməli?</strong>
+        Hüquqi audit, normativ aktda məntiqi uyğunsuzluqların tapılması, hesablama və müqayisəli analiz
+      </div>
+    </div>
+
+    <div class="gm-card" style="background: rgba(66,133,244,0.12); border: 1px solid rgba(66,133,244,0.4);">
+      <span class="gm-icon">🚀</span>
+      <h4>Pro (Gemini Pro)</h4>
+      <p>Ən güclü model. Böyük həcmli sənəd bazaları ilə işləmək üçün nəzərdə tutulub.</p>
+      <div class="use-case" style="background: rgba(66,133,244,0.1); border-color: rgba(66,133,244,0.35); color: #93beff; margin-top: 12px;">
+        <strong>Nə vaxt seçməli?</strong>
+        Bütün məcəllənin analizi, minlərlə səhifəlik arxivlə iş, çox sənədli müqayisəli araşdırma
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Model + Tool Kombinasiyaları -->
+  <div class="combo-tip">
+    <h3>🔀 Model + Alət Kombinasiyaları — Nümunələr</h3>
+    <p>Gemini-nin güclü tərəfi model seçimi ilə aləti birləşdirməkdir. Düzgün kombinasiya iş keyfiyyətini dəfələrlə artırır:</p>
+
+    <div class="combo-flow" style="margin-top: 24px;">
+      <div class="cf-step" style="background: rgba(66,133,244,0.15); color: #7baaf7;">Pro modeli</div>
+      <div class="cf-arrow">+</div>
+      <div class="cf-step" style="background: rgba(66,133,244,0.15); color: #7baaf7;">Deep Research</div>
+      <div class="cf-arrow">→</div>
+      <div class="cf-step" style="background: rgba(255,255,255,0.06); color: rgba(245,241,235,0.7);">500+ səhifəlik arxivin tam analizi + hesabat</div>
+    </div>
+
+    <div class="combo-flow">
+      <div class="cf-step" style="background: rgba(66,133,244,0.15); color: #7baaf7;">Thinking modeli</div>
+      <div class="cf-arrow">+</div>
+      <div class="cf-step" style="background: rgba(66,133,244,0.15); color: #7baaf7;">Canvas</div>
+      <div class="cf-arrow">→</div>
+      <div class="cf-step" style="background: rgba(255,255,255,0.06); color: rgba(245,241,235,0.7);">Qanun layihəsinin məntiqi yoxlanması + interaktiv sxem</div>
+    </div>
+
+    <div class="combo-flow">
+      <div class="cf-step" style="background: rgba(66,133,244,0.15); color: #7baaf7;">Fast modeli</div>
+      <div class="cf-arrow">+</div>
+      <div class="cf-step" style="background: rgba(66,133,244,0.15); color: #7baaf7;">Learn</div>
+      <div class="cf-arrow">→</div>
+      <div class="cf-step" style="background: rgba(255,255,255,0.06); color: rgba(245,241,235,0.7);">Yeni reqlamentlər üzrə sürətli interaktiv öyrənmə</div>
+    </div>
+  </div>
+
+  <!-- Tools Menyusu -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>🛠 Tools Menyusu — Bütün Seçimlər</span></h3>
+    <p class="subsection-desc">Gemini-nin Tools bölməsindəki alətlər sadəcə mətn işindən çox-çox kənara çıxır:</p>
+  </div>
+
+  <div class="gemini-tools">
+
+    <div class="gt-card">
+      <h4>🔬 Deep Research</h4>
+      <p>Həm internetdən, həm də daxili Google Drive sənədlərindən istifadə edərək çoxsəhifəli hesabatlar yaradır. Bir neçə dəqiqə ərzində tamamlanır.</p>
+      <div class="gt-use">
+        <strong>Hüquqi tətbiq:</strong> Beynəlxalq qanunvericilik araşdırması, məhkəmə təcrübəsi analizi, müqayisəli hüquqi hesabat hazırlanması
+      </div>
+    </div>
+
+    <div class="gt-card">
+      <h4>🎨 Create Image</h4>
+      <p>Saniyələr ərzində peşəkar səviyyəli görüntülər hazırlayır. Heç bir dizayn proqramı tələb olunmur.</p>
+      <div class="gt-use">
+        <strong>Hüquqi tətbiq:</strong> Vətəndaş məlumatlandırma materialları, təqdimat vizualları, hüquqi proses sxemləri
+      </div>
+    </div>
+
+    <div class="gt-card">
+      <h4>✏️ Canvas</h4>
+      <p>Tədqiqat nəticələrini interaktiv tətbiqlərə, infoqrafikalara və ya veb-səhifə formatına çevirir. Sənədi vizual olaraq yenidən qurmağa imkan verir.</p>
+      <div class="gt-use">
+        <strong>Hüquqi tətbiq:</strong> Hüquqi prosedurun vizual xəritəsi, sənəd strukturunun yenidən qurulması, ictimaiyyət üçün sadə izahat materialları
+      </div>
+    </div>
+
+    <div class="gt-card">
+      <h4>🎵 Create Music</h4>
+      <p>Mətn təsviri əsasında 30 saniyəlik orijinal musiqi yaradır. Fon musiqisi hazırlamaq üçün istifadə olunur.</p>
+      <div class="gt-use">
+        <strong>Tətbiq:</strong> Təqdimat videoları üçün peşəkar fon musiqisi, ictimai məlumatlandırma videolarının səsləndirməsi
+      </div>
+    </div>
+
+    <div class="gt-card">
+      <h4>📚 Learn</h4>
+      <p>Sokrat üsulu ilə öyrətmə rejimi. Model sizi cavab verməyə məcbur etmədən anlaşılmaz nöqtələrə qayıdır, biliyi yoxlayır.</p>
+      <div class="gt-use">
+        <strong>Hüquqi tətbiq:</strong> Yeni normativ aktların mənimsənilməsi, mürəkkəb hüquqi anlayışların dərindən başa düşülməsi, özünü yoxlama
+      </div>
+    </div>
+
+    <div class="gt-card">
+      <h4>🗂 Google Drive İnteqrasiyası</h4>
+      <p>Google Drive-dakı sənədləri birbaşa söhbətə çəkərək analiz edə bilirsiniz. E-poçtları Gmail-dən birbaşa oxuya bilir.</p>
+      <div class="gt-use">
+        <strong>Hüquqi tətbiq:</strong> Mövcud sənəd bazasındakı faylların birbaşa analizi, e-poçt yazışmalarının xülasəsi, Docs-dakı layihələrlə işləmə
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note-box" style="margin-top: 36px;">
+    <strong>Azərbaycan dilini dəstəkləyir:</strong> Gemini rəsmi olaraq Azərbaycan dilini dəstəkləyir. Bu o deməkdir ki, Azərbaycan qanunvericiliyi ilə işləyərkən dil baryeri əhəmiyyətli dərəcədə azalır. Azərbaycanca sual verib Azərbaycanca cavab ala, yerli normativ aktları yerli dildə analiz etdirə bilərsiniz.
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ CLAUDE -->
+<div id="sec-claude" class="section">
+<section class="section-hero" data-letter="A">
+  <div class="section-tag">Anthropic · Claude</div>
+  <h2>Claude AI — Hüquqi Dəqiqlik<br>və Dərin Sənəd Analizi</h2>
+  <p>Claude hüquqşünaslar tərəfindən ən etibarlı alət hesab olunur. Dili rəsmi, akademikdir, uzun sənədlərdə tam kontekst birliyini qoruyur (200–500 min tokenə qədər) və etik normalara ciddi riayət edir.</p>
+</section>
+
+<div class="content-wrap">
+
+  <!-- Claude Modelləri -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>🧠 Claude Modelləri — Hansını nə vaxt?</span></h3>
+    <p class="subsection-desc">Claude ailəsinin hər modeli xüsusi tapşırıq profili üçün optimallaşdırılıb:</p>
+  </div>
+
+  <div class="models-row" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+
+    <div class="model-card" style="background: rgba(201,107,58,0.07); border: 1px solid rgba(201,107,58,0.2);">
+      <span class="model-badge" style="background: rgba(201,107,58,0.2); color: #e8845a;">Ağıllı</span>
+      <h4>Opus 4</h4>
+      <p>Ən intellektual, ən dərin model. "Qızıl standart."</p>
+      <ul>
+        <li>Mürəkkəb qanunvericilik aktlarının yazılması</li>
+        <li>Sənəddəki gizli risklərin tapılması</li>
+        <li>Çox sənədli müqayisəli analiz</li>
+        <li>Hüquqi rəy hazırlanması</li>
+      </ul>
+    </div>
+
+    <div class="model-card" style="background: rgba(201,107,58,0.07); border: 1px solid rgba(201,107,58,0.3);">
+      <span class="model-badge" style="background: rgba(201,107,58,0.25); color: #f0a07a;">Balans</span>
+      <h4>Sonnet 4.6</h4>
+      <p>Sürət və keyfiyyəti birləşdirən əsas işçi model.</p>
+      <ul>
+        <li>Gündəlik sənəd layihələri</li>
+        <li>Standart müqavilə analizi</li>
+        <li>Sürətli hüquqi xülasə</li>
+        <li>E-poçt və məktub hazırlanması</li>
+      </ul>
+    </div>
+
+    <div class="model-card" style="background: rgba(201,107,58,0.07); border: 1px solid rgba(201,107,58,0.2);">
+      <span class="model-badge" style="background: rgba(201,107,58,0.15); color: #c9a585;">Sürətli</span>
+      <h4>Haiku 3.5</h4>
+      <p>Ən sürətli, ən yüngül model.</p>
+      <ul>
+        <li>Sürətli fakt yoxlaması</li>
+        <li>Sənəd təsnifatı</li>
+        <li>Sadə tapşırıqlar</li>
+        <li>Kütləvi sənəd emalı</li>
+      </ul>
+    </div>
+
+    <div class="model-card" style="background: linear-gradient(135deg, rgba(201,107,58,0.1), rgba(201,168,76,0.08)); border: 1px solid rgba(201,168,76,0.3);">
+      <span class="model-badge" style="background: rgba(201,168,76,0.2); color: var(--gold-light);">✨ Xüsusi</span>
+      <h4>Adaptive Thinking</h4>
+      <p>Model tapşırığın çətinliyinə görə nə qədər "düşünəcəyini" özü müəyyən edir. Maksimum dəqiqlik üçündür.</p>
+      <ul>
+        <li>Heç nəyi əl ilə konfiqurasiya etmirsiniz</li>
+        <li>Model özü optimal rejimi seçir</li>
+        <li>Həm sürəti, həm dəqiqliyi balanslayır</li>
+        <li>Ən mürəkkəb sənədlər üçün tövsiyə olunur</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Claude İnterfeys Funksiyaları -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>🖥 İnterfeys Funksiyaları — Hər Bir Seçim</span></h3>
+  </div>
+
+  <div class="connector-grid">
+
+    <div class="connector-item">
+      <h4>📎 Add Files or Photos</h4>
+      <p>PDF, Word, şəkil, cədvəl və s. fayllari birbaşa söhbətə yükləyin. Claude sənədi oxuyub analiz edir, cavab verir. Müqavilə, qanun mətni, hesabat — hər şeyi anlayır.</p>
+    </div>
+
+    <div class="connector-item">
+      <h4>📸 Take a Screenshot</h4>
+      <p>Ekranın istənilən hissəsinin şəklini çəkib birbaşa Claude-a göndərin. Skan edilmiş sənəd, veb-səhifə, müzakirə mesajı — hamısını oxuyub analiz edir.</p>
+    </div>
+
+    <div class="connector-item">
+      <h4>📁 Add to Project</h4>
+      <p>Müəyyən mövzu üzrə (məs. "Vergi Qanunu İslahatı 2026") qovluq yaradın. Bütün sənədləri ora yükləyin — Claude həmin kontekstdən çıxmadan işləyir.</p>
+    </div>
+
+    <div class="connector-item">
+      <h4>🎯 Skills &amp; Skills Creator</h4>
+      <p>Claude-a xüsusi "bacarıqlar" öyrədin. Məsələn, "Antikorrupsiya ekspertizası" bacarığı yaradın — Claude həmin bacarığa uyğun cavab verəcək.</p>
+    </div>
+
+    <div class="connector-item">
+      <h4>🔗 Add Connectors</h4>
+      <p>Google Drive, OneDrive və digər bulud xidmətlərini birbaşa Claude-a qoşun. Sənədləri yükləmədən birbaşa oradan çəkib analiz edə bilirsiniz.</p>
+    </div>
+
+    <div class="connector-item">
+      <h4>🌐 Web Search</h4>
+      <p>Claude-un öz bilik bazasından kənarda, real-vaxt internet axtarışı. Cari qanunvericilik dəyişiklikləri, son məhkəmə qərarları üçün aktivləşdirin.</p>
+    </div>
+
+  </div>
+
+  <!-- Stil Seçimləri -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>✒ Use Style — Ton Seçimi</span></h3>
+    <p class="subsection-desc">Claude-un cavab tonu və üslubu tapşırığa uyğun dəyişdirilə bilər:</p>
+  </div>
+
+  <div class="style-grid">
+
+    <div class="style-card">
+      <div class="style-name">⚖ Formal</div>
+      <p>Rəsmi məktublar, normativ aktlar, rəsmi müraciətlər. Hüquqi-bürokratik üslub. Protokol dili.</p>
+    </div>
+
+    <div class="style-card">
+      <div class="style-name">📝 Normal</div>
+      <p>Standart, balanslı ton. Çox formal deyil, çox adi deyil. Ümumi işlər üçün ideal başlanğıc nöqtəsi.</p>
+    </div>
+
+    <div class="style-card">
+      <div class="style-name">✂️ Concise</div>
+      <p>Qısa, konkret, birbaşa cavablar. Heç bir giriş-çıxış yoxdur. Yalnız əsas məlumat.</p>
+    </div>
+
+    <div class="style-card">
+      <div class="style-name">💡 Explanatory</div>
+      <p>Mürəkkəb hüquqi anlayışları sadə dildə izah edir. Vətəndaşlar üçün yazıda ideal seçimdir.</p>
+    </div>
+
+    <div class="style-card">
+      <div class="style-name">🎓 Learning</div>
+      <p>Sizi suallarla istiqamətləndirən müəllim tərzi. Mövzunu özünüz öyrənmək istəyirsinizsə.</p>
+    </div>
+
+  </div>
+
+  <!-- Slash Commands -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>/ Slash Komandaları</span></h3>
+    <p class="subsection-desc">Söhbət sahəsinə "/" yazın — bu qısa yol komandaları iş axınını sürətləndirir:</p>
+  </div>
+
+  <div class="slash-list">
+
+    <div class="slash-item">
+      <div class="slash-cmd">/clear</div>
+      <div class="slash-desc">Söhbət tarixçəsini silir və tamamilə yeni mövzuya başlayır. Yaddaş yükünü azaldır. Fərqli qanun mövzusuna keçdikdə istifadə edin.</div>
+    </div>
+
+    <div class="slash-item">
+      <div class="slash-cmd">/compact</div>
+      <div class="slash-desc">Uzun dialoqları qısaldır — əsas məqamları yadda saxlayır, gərəksizləri sıxışdırır. Uzun analiz söhbətlərinin "ağırlaşdığı" məqamda istifadə edin.</div>
+    </div>
+
+    <div class="slash-item">
+      <div class="slash-cmd">/plan</div>
+      <div class="slash-desc">İşə başlamazdan əvvəl addımları planlaşdırır və sizin razılığınızı istəyir. Mürəkkəb çoxmərhələli tapşırıqlarda əvvəlcə planı görmək üçün.</div>
+    </div>
+
+    <div class="slash-item">
+      <div class="slash-cmd">/effort</div>
+      <div class="slash-desc">Modelin tapşırığa nə qədər "güc" sərf edəcəyini tənzimləyir. Sürətli cavab vs. dərin analiz arasında tarazlıq üçün.</div>
+    </div>
+
+  </div>
+
+  <!-- LEGAL Framework -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>⚖ LEGAL Metodologiyası — Düzgün Sual Qurmaq</span></h3>
+    <p class="subsection-desc">Süni zəkadan ən yaxşı cavabı almaq üçün sualınızı bu 5 elementlə qurun:</p>
+  </div>
+
+  <div class="legal-frame">
+
+    <div class="legal-item">
+      <div class="legal-letter">L</div>
+      <h4>Legal Role — Rol Verin</h4>
+      <p>Süni zəkaya konkret ekspert rolu verin. Model o rolda davranmağa başlayır.</p>
+      <div class="legal-example">"Sən mülki hüquq üzrə 20 illik təcrübəsi olan ekspertsən..."</div>
+    </div>
+
+    <div class="legal-item">
+      <div class="legal-letter">E</div>
+      <h4>Explicit Goal — Məqsəd</h4>
+      <p>Nə istədiyinizi dəqiq müəyyən edin. Ümumi suallar ümumi cavablar doğurur.</p>
+      <div class="legal-example">"Bu qanun layihəsindəki ziddiyyətləri cədvəl şəklində sırala"</div>
+    </div>
+
+    <div class="legal-item">
+      <div class="legal-letter">G</div>
+      <h4>Grounding — Kontekst</h4>
+      <p>Yurisdiksiya və istifadə ediləcək hüquqi çərçivəni qeyd edin.</p>
+      <div class="legal-example">"Yalnız AR Mülki Məcəlləsinə istinad et"</div>
+    </div>
+
+    <div class="legal-item">
+      <div class="legal-letter">A</div>
+      <h4>Accuracy Controls — Dəqiqlik</h4>
+      <p>Hər iddia üçün konkret mənbə tələb edin. Uydurma qarşısını alır.</p>
+      <div class="legal-example">"Hər fikir üçün maddə nömrəsi və sitat gətir"</div>
+    </div>
+
+    <div class="legal-item">
+      <div class="legal-letter">L</div>
+      <h4>Legal Standards — Format</h4>
+      <p>Çıxışın formatını əvvəlcədən müəyyən edin — vaxt itkisinin qarşısını alır.</p>
+      <div class="legal-example">"Rəsmi memorandum üslubunda hazırla"</div>
+    </div>
+
+  </div>
+
+  <div class="note-box" style="margin-top: 32px;">
+    <strong>LEGAL metodologiyası nümunəsi:</strong> "Sən əmək hüququ üzrə ekspertsən [L]. Bu iş müqaviləsindəki işçi hüquqlarını pozduğunu düşündüyüm bəndləri müəyyən et [E]. Yalnız AR Əmək Məcəlləsinə istinad et [G]. Hər bənd üçün maddə nömrəsi göstər [A]. Cavabı cədvəl formatında hazırla [L]."
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ MÜQAYISƏ -->
+<div id="sec-compare" class="section">
+<section class="section-hero" data-letter="M">
+  <div class="section-tag">Strateji Baxış</div>
+  <h2>Üç Alət —<br>Üç Fərqli Güc</h2>
+  <p>Hər üç alət fərqli güclü tərəflərə malikdir. Onları anlamaq düzgün alət seçiminə — və iş keyfiyyətinin artırılmasına — birbaşa təsir edir.</p>
+</section>
+
+<div class="content-wrap">
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th class="th-task">Tapşırıq Tipi</th>
+        <th class="th-chatgpt">🤖 ChatGPT</th>
+        <th class="th-gemini">✦ Gemini</th>
+        <th class="th-claude">◆ Claude</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Böyük arxivlər (500+ səh.)</strong></td>
+        <td>Orta (128K kontekst)</td>
+        <td style="color: #7baaf7;"><strong>✓ Ən Yaxşı</strong> — 2M token, 1500+ səhifə</td>
+        <td>Yaxşı — 200K+ token</td>
+      </tr>
+      <tr>
+        <td><strong>Müqavilə analizi</strong></td>
+        <td>Yaxşı</td>
+        <td>Orta</td>
+        <td style="color: #e8845a;"><strong>✓ Ən Yaxşı</strong> — 94.2% dəqiqlik</td>
+      </tr>
+      <tr>
+        <td><strong>Derin internet araşdırması</strong></td>
+        <td style="color: var(--chatgpt);"><strong>✓ Ən Yaxşı</strong> — Deep Research</td>
+        <td>Yaxşı — Drive + internet</td>
+        <td>Orta (Web Search ilə)</td>
+      </tr>
+      <tr>
+        <td><strong>Qanun layihəsi yazılması</strong></td>
+        <td>Yaxşı</td>
+        <td>Orta</td>
+        <td style="color: #e8845a;"><strong>✓ Ən Yaxşı</strong> — rəsmi, akademik dil</td>
+      </tr>
+      <tr>
+        <td><strong>Google Workspace inteqrasiyası</strong></td>
+        <td>Məhdud (Gmail connector)</td>
+        <td style="color: #7baaf7;"><strong>✓ Ən Yaxşı</strong> — tam inteqrasiya</td>
+        <td>Drive connector mövcuddur</td>
+      </tr>
+      <tr>
+        <td><strong>Azərbaycan dili dəstəyi</strong></td>
+        <td>Yaxşı</td>
+        <td style="color: #7baaf7;"><strong>✓ Rəsmi dəstək</strong></td>
+        <td>Yaxşı</td>
+      </tr>
+      <tr>
+        <td><strong>Etik/təhlükəsiz davranış</strong></td>
+        <td>Yaxşı</td>
+        <td>Yaxşı</td>
+        <td style="color: #e8845a;"><strong>✓ Ən Yaxşı</strong> — Konstitusion Sİ</td>
+      </tr>
+      <tr>
+        <td><strong>Strukturlaşdırma / sürətli qaralama</strong></td>
+        <td style="color: var(--chatgpt);"><strong>✓ Ən Yaxşı</strong></td>
+        <td>Yaxşı</td>
+        <td>Yaxşı</td>
+      </tr>
+      <tr>
+        <td><strong>Vizual kontent (şəkil, musiqi)</strong></td>
+        <td>Yaxşı (DALL-E)</td>
+        <td style="color: #7baaf7;"><strong>✓ Ən Yaxşı</strong> — şəkil + musiqi</td>
+        <td>Məhdud</td>
+      </tr>
+      <tr>
+        <td><strong>İnteraktiv redaktə (Canvas)</strong></td>
+        <td style="color: var(--chatgpt);"><strong>✓ Güclü</strong></td>
+        <td style="color: #7baaf7;"><strong>✓ Güclü</strong></td>
+        <td>Orta</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note-box" style="margin-top: 40px;">
+    <strong>Əsas tövsiyə:</strong> Bu üç aləti <em>rəqib</em> kimi deyil, <em>tamamlayıcı</em> kimi istifadə edin.
+    <strong>ChatGPT</strong> → sürətli strukturlaşdırma və internet araşdırması.
+    <strong>Claude</strong> → dərin hüquqi analiz, müqavilə, mükəmməl yazı tonu.
+    <strong>Gemini</strong> → böyük arxivlər, Google Workspace, Azərbaycan dili.
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ SCENARİLƏR -->
+<div id="sec-scenarios" class="section">
+<section class="section-hero" data-letter="S">
+  <div class="section-tag">Praktiki Tətbiq</div>
+  <h2>Hüquqi İş Ssenariləri —<br>Hansı Alət, Nə Vaxt?</h2>
+  <p>Hüquqi Ekspertiza və Qanunvericilik Təşəbbüsləri Mərkəzinin gündəlik iş axınına uyğun real tətbiq ssenariləri:</p>
+</section>
+
+<div class="content-wrap">
+  <div class="scenario-list">
+
+    <div class="scenario">
+      <div class="scenario-num">01</div>
+      <div>
+        <h4>Beynəlxalq Qanunvericilik Müqayisəsi</h4>
+        <p>Rəqəmsal vergi tənzimlənməsi sahəsində 5 ölkənin qanunvericiliyini müqayisə etmək lazımdır. ChatGPT Deep Research vasitəsilə internetdəki mənbələri araşdırın, Gemini Pro-ya sənədləri yükləyin, Claude Opus-la müqayisəli cədvəl hazırlayın.</p>
+        <div class="scenario-tools">
+          <span class="stag stag-chatgpt">ChatGPT Deep Research</span>
+          <span class="stag stag-gemini">Gemini Pro</span>
+          <span class="stag stag-claude">Claude Opus</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-num">02</div>
+      <div>
+        <h4>Qanun Layihəsinin Risk Analizi</h4>
+        <p>Hazırlanan qanun layihəsindəki zəif nöqtələri müəyyən etmək üçün Claude-a sənədi yükləyin və "Bu layihəni əleyhdar hüquqşünas gözü ilə tənqid et, məntiqi boşluqları göstər" tapşırığı verin. Thinking modeli ilə daha dərin analiz əldə edin.</p>
+        <div class="scenario-tools">
+          <span class="stag stag-claude">Claude Opus + Adaptive Thinking</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-num">03</div>
+      <div>
+        <h4>Böyük Qanunvericilik Arxivinin Analizi</h4>
+        <p>Minlərlə səhifəlik məhkəmə arxivini və ya qanunvericilik külliyyatını analiz etmək lazımdır. Gemini Pro + Deep Research kombinasiyası bütün arxivi bir dəfəyə emal edib strukturlaşdırılmış hesabat hazırlayır.</p>
+        <div class="scenario-tools">
+          <span class="stag stag-gemini">Gemini Pro + Deep Research</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-num">04</div>
+      <div>
+        <h4>Müqavilənin Hüquqi Ekspertizası</h4>
+        <p>Müqavilə bəndlərini Claude-a yükləyin. LEGAL metodologiyası ilə: "Sən müqavilə hüququ üzrə ekspertsən. Bu müqavilədəki işçi hüquqlarını poza biləcək bəndləri müəyyən et. Yalnız AR Əmək Məcəlləsinə istinad et. Hər bənd üçün maddə nömrəsi göstər. Cədvəl formatında hazırla."</p>
+        <div class="scenario-tools">
+          <span class="stag stag-claude">Claude Sonnet + Formal Style</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-num">05</div>
+      <div>
+        <h4>Vətəndaşlar Üçün Sadə İzahat Materialı</h4>
+        <p>Mürəkkəb qanun mətnini vətəndaşların anlayacağı sadə dilə çevirmək üçün Claude-un "Explanatory" stilindən istifadə edin. ChatGPT-nin "ELI5" (Explain Like I'm 5) rejimi də bu məqsəd üçün idealdır.</p>
+        <div class="scenario-tools">
+          <span class="stag stag-claude">Claude + Explanatory Style</span>
+          <span class="stag stag-chatgpt">ChatGPT ELI5</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-num">06</div>
+      <div>
+        <h4>Normativ Aktın Cari Statusunun Yoxlanması</h4>
+        <p>Qanunun qüvvəyə minib-minmədiyini, dəyişiklik olub-olmadığını yoxlamaq üçün ChatGPT-nin Web Search funksiyasından istifadə edin. Real vaxt məlumatları ilə mənbəyə istinad edilmiş cavab alırsınız.</p>
+        <div class="scenario-tools">
+          <span class="stag stag-chatgpt">ChatGPT Web Search</span>
+          <span class="stag stag-gemini">Gemini Web Search</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-num">07</div>
+      <div>
+        <h4>Əməkdaşlar Üçün Bilik Testi</h4>
+        <p>Yeni qəbul edilmiş normativ akt barədə əməkdaşların biliyini yoxlamaq üçün ChatGPT-nin Quizzes funksiyasından istifadə edin. Mövzu mətnini yükləyin — avtomatik olaraq test sualları hazırlanacaq.</p>
+        <div class="scenario-tools">
+          <span class="stag stag-chatgpt">ChatGPT Quizzes</span>
+          <span class="stag stag-gemini">Gemini Learn</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-num">08</div>
+      <div>
+        <h4>Qanun Layihəsinin Maddə-Maddə Redaktəsi</h4>
+        <p>Canvas alətindən istifadə edərək layihəni hissə-hissə redaktə edin. Hər dəyişikliyi görürsünüz, əvvəlki versiyaya qayıda bilərsiniz. ChatGPT Canvas və ya Gemini Canvas bu iş üçün idealdır.</p>
+        <div class="scenario-tools">
+          <span class="stag stag-chatgpt">ChatGPT Canvas + Thinking</span>
+          <span class="stag stag-gemini">Gemini Canvas + Thinking</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+<!-- ══════════════════════════════════════════════ TÖVSİYƏLƏR -->
+<div id="sec-tips" class="section">
+<section class="section-hero" data-letter="T">
+  <div class="section-tag">Təhlükəsizlik &amp; Praktika</div>
+  <h2>Əsas Tövsiyələr —<br>Effektiv və Təhlükəsiz İstifadə</h2>
+  <p>Süni zəka alətlərindən peşəkar səviyyədə istifadə etmək üçün bu qaydalar hüquqşünas üçün "etik kodeks" rolunu oynayır.</p>
+</section>
+
+<div class="content-wrap">
+
+  <div class="subsection">
+    <h3 class="subsection-title"><span>🔐 Məxfilik Qaydaları</span></h3>
+  </div>
+
+  <div class="step-list">
+    <div class="step-item">
+      <p><strong>Şəxsi və məxfi məlumatları ictimai Sİ çatlarına daxil etməyin.</strong> Müştəri adları, şirkət daxili məlumatlar, sınaqda olan iş sənədləri — bunlar Sİ-yə verilməməlidir. Əvvəlcə məlumatı anonimləşdirin.</p>
+    </div>
+    <div class="step-item">
+      <p><strong>Modellərin "training" parametrlərini söndürün.</strong> Çox platformada daxil olan məlumatların modeli öyrətmək üçün istifadə edilməməsi üçün bu parametri deaktiv etmək mümkündür.</p>
+    </div>
+    <div class="step-item">
+      <p><strong>Sənəddəki fərdi məlumatları silərək yükləyin.</strong> ŞƏVHƏR nömrəsi, doğum tarixi, ünvan kimi məlumatları əvəzləyin. "Şəxs A", "Şirkət B" kimi yer tutanlarla istifadə edin.</p>
+    </div>
+    <div class="step-item">
+      <p><strong>Korporativ hesablardan istifadə edin.</strong> ChatGPT Team/Enterprise, Claude for Work, Gemini for Google Workspace — bu planlar məlumatı emal etmir və daha güclü gizlilik zəmanəti verir.</p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <h3 class="subsection-title"><span>✅ Keyfiyyət Yoxlama Qaydaları</span></h3>
+  </div>
+
+  <div class="step-list">
+    <div class="step-item">
+      <p><strong>Sİ-nin gətirdiyi hər istinadı yoxlayın.</strong> Hallüsinasiya riski realdır — mövcud olmayan maddə nömrələri, uydurma məhkəmə qərarları mümkündür. Rəsmi hüquq bazalarından doğrulayın.</p>
+    </div>
+    <div class="step-item">
+      <p><strong>Sİ məsləhəti deyil, alətdir.</strong> Son qərar həmişə insanın öhdəliyidir. Sİ ilkin qaralama, strukturlaşdırma, seçimlər hazırlayır — final qərar sizindir.</p>
+    </div>
+    <div class="step-item">
+      <p><strong>Cavabı oxuyun, kopyalayıb yapışdırmayın.</strong> Sİ çıxışını həmişə analitik baxışla oxuyun. Məzmunu öz anlayışınızdan keçirin, sonra istifadə edin.</p>
+    </div>
+    <div class="step-item">
+      <p><strong>Bir tapşırıq üçün iki alətdən istifadə edin.</strong> Mühüm analizlər üçün eyni sualı iki platformada verin, cavabları müqayisə edin — beləliklə keyfiyyət artır.</p>
+    </div>
+  </div>
+
+  <div class="warning-box" style="margin-top: 48px;">
+    <div class="warning-icon">⚖️</div>
+    <div>
+      <h3>Hüquqi Məsuliyyət Xatırlatması</h3>
+      <p>Süni zəka alətlərinin hazırladığı heç bir sənəd peşəkar hüquqi məsləhətin yerini tuta bilməz. Sİ ekspert köməkçisidir — hüquqi məsuliyyət həmişə peşəkar hüquqşünasın üzərindədir. Sİ cavabına əsasən götürülmüş hər bir qərar üçün son yoxlama mütləqdir.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-left">⚖ Hüquqi Ekspertiza və Qanunvericilik Təşəbbüsləri Mərkəzi</div>
+  <div class="footer-right">Süni Zəka Alətləri Təlimi · 2026</div>
+</footer>
+</div>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function (event) {
-     type();
-     movingBackgroundImage();
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  const target = document.getElementById(id);
+  if (target) {
+    target.classList.add('active');
+    // scroll to nav
+    document.querySelector('nav').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.querySelectorAll('.nav-item').forEach(n => {
+    n.classList.toggle('active', n.dataset.sec === id);
   });
+
+  // update pills in hero
+  document.querySelectorAll('.pill').forEach(p => {
+    p.style.opacity = '1';
+  });
+}
+
+// Progress bar
+window.addEventListener('scroll', () => {
+  const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+
+// Keyboard nav
+document.addEventListener('keydown', e => {
+  const sections = ['sec-home','sec-chatgpt','sec-gemini','sec-claude','sec-compare','sec-scenarios','sec-tips'];
+  const active = document.querySelector('.section.active');
+  if (!active) return;
+  const idx = sections.indexOf(active.id);
+  if (e.key === 'ArrowRight' && idx < sections.length - 1) showSection(sections[idx+1]);
+  if (e.key === 'ArrowLeft' && idx > 0) showSection(sections[idx-1]);
+});
 </script>
-
-
-<script type="text/javascript" src="./main.70a66962.js"></script></body>
-
+</body>
 </html>
