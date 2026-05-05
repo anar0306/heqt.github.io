@@ -41,9 +41,9 @@
     text-align: center;
     padding: 60px 40px;
     position: relative;
-    background: radial-gradient(ellipse at 20% 50%, #1a2a1a 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 20%, #1a1a2a 0%, transparent 60%),
-                radial-gradient(ellipse at 60% 80%, #2a1a0a 0%, transparent 60%),
+    background: radial-gradient(ellipse at 20% 50%, #172b2e 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, #092024 0%, transparent 60%),
+                radial-gradient(ellipse at 60% 80%, #2c1c07 0%, transparent 60%),
                 var(--ink);
     overflow: hidden;
   }
@@ -75,13 +75,9 @@
     animation: fadeUp 0.8s ease both;
   }
 
-  .hero-badge::before {
-    content: '⚖';
-    font-size: 1rem;
-  }
 
   .hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: clamp(2.8rem, 6vw, 5.5rem);
     font-weight: 900;
     line-height: 1.08;
@@ -172,7 +168,7 @@
 
   .nav-logo {
     padding: 14px 24px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 0.95rem;
     color: var(--gold);
     white-space: nowrap;
@@ -225,7 +221,7 @@
     position: absolute;
     right: -20px;
     top: -20px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 300px;
     font-weight: 900;
     opacity: 0.04;
@@ -254,7 +250,7 @@
   }
 
   .section-hero h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: clamp(2rem, 4vw, 3.5rem);
     font-weight: 700;
     line-height: 1.15;
@@ -331,7 +327,7 @@
   .claude-icon { background: rgba(201,107,58,0.15); }
 
   .tool-card h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 10px;
@@ -393,7 +389,7 @@
   }
 
   .model-card h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 8px;
@@ -526,7 +522,7 @@
   }
 
   .gm-card h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.1rem;
     margin-bottom: 8px;
   }
@@ -587,7 +583,7 @@
   .legal-item:hover { transform: translateY(-3px); }
 
   .legal-letter {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 3rem;
     font-weight: 900;
     color: var(--gold);
@@ -659,7 +655,7 @@
   }
 
   .subsection-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.7rem;
     font-weight: 700;
     margin-bottom: 8px;
@@ -706,7 +702,7 @@
   .scenario:hover { border-color: rgba(201,168,76,0.2); }
 
   .scenario-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 2.5rem;
     font-weight: 900;
     color: rgba(201,168,76,0.2);
@@ -747,7 +743,7 @@
   }
 
   .footer-left {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.1rem;
     color: var(--gold);
   }
@@ -872,7 +868,7 @@
   }
 
   .combo-tip h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 16px;
     color: var(--gold-light);
@@ -1022,7 +1018,7 @@
 
   .step-item::before {
     content: counter(step-counter);
-    font-family: 'Playfair Display', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--gold);
@@ -1054,14 +1050,14 @@
     və Onların Tətbiqi
   </h1>
   <p class="hero-subtitle">
-    ChatGPT, Gemini və Claude AI — bu üç platformanın tam imkanları, alətləri və hüquqi iş proseslərindəki tətbiq ssenariləri
+    Chatgpt, Gemini və Claude - bu üç platformanın tam imkanları, alətləri və hüquqi iş proseslərindəki tətbiq senariləri
   </p>
   <div class="hero-pills">
-    <div class="pill pill-chatgpt" onclick="showSection('sec-chatgpt')">🤖 ChatGPT</div>
-    <div class="pill pill-gemini" onclick="showSection('sec-gemini')">✦ Gemini</div>
-    <div class="pill pill-claude" onclick="showSection('sec-claude')">◆ Claude AI</div>
-    <div class="pill" style="border-color:rgba(201,168,76,0.5); color:var(--gold);" onclick="showSection('sec-compare')">⚖ Müqayisə</div>
-    <div class="pill" style="border-color:rgba(245,241,235,0.2); color:rgba(245,241,235,0.5);" onclick="showSection('sec-scenarios')">📋 Ssenariləri</div>
+    <div class="pill pill-chatgpt" onclick="showSection('sec-chatgpt')">Chatgpt</div>
+    <div class="pill pill-gemini" onclick="showSection('sec-gemini')">Gemini</div>
+    <div class="pill pill-claude" onclick="showSection('sec-claude')">Claude</div>
+    <div class="pill" style="border-color:rgba(88, 88, 88, 0.5); color:var(--gold);" onclick="showSection('sec-compare')">Müqayisə</div>
+    <div class="pill" style="border-color:rgba(245,241,235,0.2); color:rgba(245,241,235,0.5);" onclick="showSection('sec-scenarios')">Senarilər</div>
   </div>
   <div class="scroll-hint">
     <span>Bölmə seçin</span>
@@ -1072,7 +1068,7 @@
 
 <!-- ══════════════════════════════════════════════ NAV -->
 <nav>
-  <div class="nav-logo">⚖ SZ Alətləri</div>
+  <div class="nav-logo">Sİ Alətləri</div>
   <div class="nav-items">
     <div class="nav-item active" onclick="showSection('sec-home')" data-sec="sec-home">Ana Səhifə</div>
     <div class="nav-item" onclick="showSection('sec-chatgpt')" data-sec="sec-chatgpt">ChatGPT</div>
