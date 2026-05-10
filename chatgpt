@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT — Süni Zəka Alətləri</title>
+<link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ══════ NAV ══════ -->
+<nav>
+  <a class="nav-logo" href="index.html">Sİ Alətləri</a>
+  <div class="nav-items">
+    <a class="nav-item"        href="index.html">Ana Səhifə</a>
+    <a class="nav-item active" href="chatgpt.html">ChatGPT</a>
+    <a class="nav-item"        href="gemini.html">Gemini</a>
+    <a class="nav-item"        href="claude-ai.html">Claude AI</a>
+    <a class="nav-item"        href="muqayise.html">Müqayisə</a>
+    <a class="nav-item"        href="is-ssenarileri.html">İş Ssenariləri</a>
+    <a class="nav-item"        href="tovsiyeler.html">Tövsiyələr</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ══════ SECTION HERO ══════ -->
+<section class="section-hero chatgpt-section-hero" data-letter="C">
+  <div class="section-tag">OpenAI · GPT-5</div>
+  <h2>ChatGPT — Çoxfunksiyalı<br>Məntiqi Analitik</h2>
+  <p>ChatGPT müasir hüquqşünaslıq üçün ən geniş tətbiq ekosisteminə malik alətdir.
+     Mürəkkəb məntiqi mühakimə, interaktiv redaktə və dərin internet araşdırmaları onun əsas güclü tərəfləridir.</p>
+</section>
+
+<div class="content-wrap">
+
+  <!-- "+" Alət Menyusu -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>Alət Menyusu "+" Nə İşə Yarayır?</span></h3>
+    <p class="subsection-desc">Yazı sahəsindəki "+" ikonuna klik etdikdə əlavə alətlər menyusu açılır
+       və buradan müxtəlif funksiyalara keçid edə bilərsiniz:</p>
+  </div>
+
+  <div class="tools-grid">
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon"></div>
+      <h3>Deep Research</h3>
+      <p>İnternetdəki yüzlərlə mənbəni müstəqil araşdırır, məlumatları çarpaz yoxlayır
+         və strukturlaşdırılmış hesabat hazırlayır. <strong>5–30 dəqiqə</strong> ərzində tamamlanır.
+         Siz o zaman başqa işlərlə məşğul ola bilərsiniz — tamamlananda bildiriş gəlir.</p>
+      <div class="use-case">
+        <strong>Hüquqi tətbiq</strong>
+        Beynəlxalq qanunvericilik müqayisəsi (məs. rəqəmsal vergi tənzimlənməsinin 5 ölkədə tətbiqi),
+        məhkəmə təcrübəsinin analizi, GDPR / yerli miqyasda qanunvericilik fərqləri
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon"></div>
+      <h3>Thinking (Düşüncə rejimi)</h3>
+      <p>Modeli cavab verməzdən əvvəl addım-addım məntiqi zəncir qurmağa məcbur edir.
+         GPT-5 Thinking rejimi aktiv olduqda model öz çatışmazlıqlarını özü düzəldə bilir.</p>
+      <div class="use-case">
+        <strong>Hüquqi tətbiq</strong>
+        Mürəkkəb hüquqi kolliziyaların həlli, qanun layihəsindəki məntiqi boşluqların tapılması,
+        müqavilə şərtlərinin bir-birinə zidd olub-olmadığının yoxlanması
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon"></div>
+      <h3>Web Search</h3>
+      <p>Aktual məlumatları real vaxtda axtarır və mənbələrə (linklərə) istinad edir.
+         Modelin öz bilik bazasından fərqli olaraq, bu alət bu günün məlumatlarını gətirir.</p>
+      <div class="use-case">
+        <strong>Hüquqi tətbiq</strong>
+        Qanunların cari statusunu yoxlamaq, son qəbul edilmiş qərarları tapmaq,
+        qüvvəyə minmə tarixlərini dəqiqləşdirmək
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon"></div>
+      <h3>Canvas</h3>
+      <p>Yazdığınız mətni paralel pəncərədə göstərən interaktiv redaktə sahəsidir.
+         Mətni hissə-hissə seçib yenidən yazmağa, şərh əlavə etməyə, versiyaları müqayisə etməyə imkan verir.</p>
+      <div class="use-case">
+        <strong>Hüquqi tətbiq</strong>
+        Qanun layihələrinin maddə-maddə təkmilləşdirilməsi, müqavilə bəndlərinin dəyişdirilməsi,
+        izahat vərəqələrinin redaktəsi — hər dəyişikliyi ayrıca görürsünüz
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon">❓</div>
+      <h3>Quizzes</h3>
+      <p>Yüklədiyiniz mətni dərhal test suallarına və yaddaş kartlarına çevirir.
+         Mövcud materiallar üzrə biliyinizi yoxlamağa imkan verir.</p>
+      <div class="use-case">
+        <strong>Hüquqi tətbiq</strong>
+        Yeni qəbul edilmiş reqlamentlər üzrə daxili yoxlama testlərinin hazırlanması,
+        əməkdaşların bilik səviyyəsinin ölçülməsi, vətəndaşlar üçün sadə bilgi yoxlamaları
+      </div>
+    </div>
+
+    <div class="tool-card chatgpt-card">
+      <div class="tool-icon chatgpt-icon">🎨</div>
+      <h3>Create Image</h3>
+      <p>Mətn əsasında peşəkar görüntülər yaradır (DALL-E texnologiyası).
+         Vizual kontent üçün ayrıca proqramlara ehtiyac qalmır.</p>
+      <div class="use-case">
+        <strong>Hüquqi tətbiq</strong>
+        Təqdimatlar üçün konseptual sxemlərin hazırlanması, hüquqi prosedurları izah edən infoqurafikalar,
+        vətəndaş məlumatlandırma materialları üçün illüstrasiyalar
+      </div>
+    </div>
+
+  </div>
+
+  <!-- GPT Modelləri -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>GPT Modelləri — Hansını seçməli?</span></h3>
+    <p class="subsection-desc">ChatGPT müxtəlif tapşırıq tipləri üçün fərqli güc səviyyəli modellər təklif edir:</p>
+  </div>
+
+  <div class="models-row">
+
+    <div class="model-card" style="background: rgba(16,163,127,0.07); border: 1px solid rgba(16,163,127,0.2);">
+      <span class="model-badge" style="background: rgba(16,163,127,0.2); color: var(--chatgpt);">Sürət</span>
+      <h4>GPT-5 Instant</h4>
+      <p>Sürətli, gündəlik tapşırıqlar üçün ideal</p>
+      <ul>
+        <li>Qısa sənəd xülasələri</li>
+        <li>Sürətli sual-cavab</li>
+        <li>E-poçt hazırlanması</li>
+        <li>Sadə mətn tənzimlənməsi</li>
+      </ul>
+    </div>
+
+    <div class="model-card" style="background: rgba(16,163,127,0.07); border: 1px solid rgba(16,163,127,0.3);">
+      <span class="model-badge" style="background: rgba(16,163,127,0.25); color: #2ecc71;">Balans</span>
+      <h4>GPT-5 Thinking</h4>
+      <p>Dərindən düşünən, analitik model</p>
+      <ul>
+        <li>Mürəkkəb hüquqi analizlər</li>
+        <li>Qanun layihəsi boşluqları</li>
+        <li>Uzun sənəd strukturlaşdırması</li>
+        <li>Çoxaddımlı problemlər</li>
+      </ul>
+    </div>
+
+    <div class="model-card" style="background: rgba(16,163,127,0.07); border: 1px solid rgba(16,163,127,0.4);">
+      <span class="model-badge" style="background: rgba(16,163,127,0.35); color: #a8ffea;">Premium</span>
+      <h4>GPT-5 Pro</h4>
+      <p>Ən ağıllı, ən dəqiq model</p>
+      <ul>
+        <li>Son dərəcə mürəkkəb məsələlər</li>
+        <li>Çox az səhv toleransı olan işlər</li>
+        <li>Həssas hüquqi ekspertizalar</li>
+        <li>Elmi tədqiqat səviyyəsindəki tapşırıqlar</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ChatGPT Projects -->
+  <div class="subsection">
+    <h3 class="subsection-title"><span>Projects — Layihələr</span></h3>
+    <p class="subsection-desc">Müəyyən mövzu üzrə (məs. "Vergi İslahatı 2026") ayrıca qovluq yaradaraq
+       bütün sənəd, söhbət və kontekstinizi bir yerdə saxlaya bilərsiniz.</p>
+  </div>
+
+  <div class="note-box">
+    <strong>Hüquqşünaslar üçün məsləhət:</strong> Hər bir aktiv qanun layihəsi üçün ayrıca Project açın.
+    Bütün əlaqəli sənədləri, müzakirə nəticələrini və araşdırmaları həmin layihəyə yükləyin.
+    ChatGPT həmin kontekstdən çıxmadan işləyəcək.
+  </div>
+
+  <div class="warning-box">
+    <div class="warning-icon">⚠️</div>
+    <div>
+      <h3>Hallüsinasiya Riski — Mütləq Yoxlayın!</h3>
+      <p>Tədqiqatlar göstərir ki, ChatGPT bəzən mövcud olmayan maddə nömrələri, məhkəmə qərarları
+         və ya sitat mənbələri "uydura" bilir. Hüquqi işdə bu kritik risk yaradır.</p>
+      <ul>
+        <li>ChatGPT-nin gətirdiyi <strong>hər bir istinadı rəsmi mənbədən yoxlayın</strong></li>
+        <li>Maddə nömrələrini müstəqil olaraq Hüquqi Aktlar portalında doğrulayın</li>
+        <li>Deep Research istifadə edərkən belə son yoxlama mütləqdir</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+</main>
+
+<footer class="footer">
+  <div class="footer-left">⚖ Hüquqi Ekspertiza və Qanunvericilik Təşəbbüsləri Mərkəzi</div>
+  <div class="footer-right">Süni Zəka Alətləri Təlimi · 2026</div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  document.getElementById('progressBar').style.width = scrolled + '%';
+});
+</script>
+</body>
+</html>
