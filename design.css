@@ -909,7 +909,7 @@ nav::-webkit-scrollbar { display: none; }
   font-family: 'DM Sans', sans-serif;
   font-size: 1.2rem;
   margin-bottom: 16px;
-  color: var(--gold-light);
+  color: #c66430;
 }
 
 .combo-tip p {
