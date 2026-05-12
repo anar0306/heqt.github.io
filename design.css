@@ -284,11 +284,11 @@ nav::-webkit-scrollbar { display: none; }
 
 /* ─── Section color backgrounds ─── */
 
-.chatgpt-section-hero   { background: radial-gradient(ellipse at top left, #7c00ff24,  transparent 70%); }
-.gemini-section-hero    { background: radial-gradient(ellipse at top left, #00d2ff2b,  transparent 70%); }
-.claude-section-hero    { background: radial-gradient(ellipse at top left, #ff57002e,  transparent 70%); }
-.compare-section-hero   { background: radial-gradient(ellipse at top left, #ffffff1a,  transparent 70%); }
-.scenarios-section-hero { background: radial-gradient(ellipse at top left, #ffffff1a,  transparent 70%); }
+.chatgpt-section-hero   { background: radial-gradient(ellipse at top left, #7c00ff1a,  transparent 70%); }
+.gemini-section-hero    { background: radial-gradient(ellipse at top left, #00d2ff1a,  transparent 70%); }
+.claude-section-hero    { background: radial-gradient(ellipse at top left, #ff570017,  transparent 70%); }
+.compare-section-hero   { background: radial-gradient(ellipse at top left, #4c4c4c59,  transparent 70%); }
+.scenarios-section-hero { background: radial-gradient(ellipse at top left, #4c4c4c59,  transparent 70%); }
 
 /* ══════════════════════════════════════════════
    CONTENT WRAP
