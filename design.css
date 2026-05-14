@@ -375,7 +375,7 @@ nav::-webkit-scrollbar { display: none; }
   border-radius: 8px;
   padding: 10px 14px;
   font-size: 0.8rem;
-  color: var(--gold-light);
+  color: #3e90a1;
   line-height: 1.5;
 }
 
