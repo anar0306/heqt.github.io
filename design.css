@@ -686,7 +686,7 @@ nav::-webkit-scrollbar { display: none; }
 .note-box {
   margin-top: 32px;
   padding: 20px 24px;
-  background: rgba(201,168,76,0.07);
+  background: #202020;
   border-left: 3px solid var(--gold);
   border-radius: 0 10px 10px 0;
   font-size: 0.87rem;
@@ -694,7 +694,7 @@ nav::-webkit-scrollbar { display: none; }
   color: rgba(245,241,235,0.75);
 }
 
-.note-box strong { color: var(--gold-light); }
+.note-box strong { color: #c96b3a; }
 
 /* ══════════════════════════════════════════════
    DIVIDERS & SUBSECTIONS
