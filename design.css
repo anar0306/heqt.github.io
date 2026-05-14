@@ -370,8 +370,8 @@ nav::-webkit-scrollbar { display: none; }
 }
 
 .use-case {
-  background: rgba(201,168,76,0.08);
-  border: 1px solid rgba(201,168,76,0.2);
+  background: #6565ad12;
+  border: 1px solid #6565ad59;
   border-radius: 8px;
   padding: 10px 14px;
   font-size: 0.8rem;
